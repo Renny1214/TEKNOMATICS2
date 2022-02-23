@@ -1,0 +1,21 @@
+<div class=" card m-5 p-5">
+
+
+    <form [formGroup]="form" class="form-horizontal row">
+          <div class="form-group">
+              <label for="name" class="asterisk">Username</label>
+              <input [ngClass]="{'is-invalid': (!form.controls.name.valid  && form.controls.name.dirty), 'is-valid':(form.controls.name.valid  && form.controls.name.dirty)}" type="text" placeholder="Enter Name" class="form-control" formControlName="name" id="name">
+              <div class="invalid-feedback">Name must contain 3 characters.</div>
+          </div>
+          <div class="form-group mt-3">
+            <label for="password" class="asterisk">Password</label>
+            <input [ngClass]="{'is-invalid': (!form.controls.password.valid  && form.controls.password.dirty), 'is-valid':(form.controls.password.valid  && form.controls.password.dirty)}" type="text" placeholder="Enter password" class="form-control" formControlName="password" id="password">
+            <div class="invalid-feedback"></div>
+        </div>
+  
+      
+    </form>
+    
+    <button class="btn btn-sm mt-5 btn-danger" (click)="addData()">click me</button>
+    
+    </div>
